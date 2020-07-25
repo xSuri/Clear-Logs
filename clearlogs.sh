@@ -37,7 +37,7 @@ fi
 
 echo "Generate Logs..."
 
-cd /home/suri/inne/scripts/clearlogsSYS/
+cd /home/ # <-- paste your path
 
 touch log.txt
 chmod 755 log.txt
