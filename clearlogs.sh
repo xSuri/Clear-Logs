@@ -37,24 +37,48 @@ fi
 
 echo "Generate Logs..."
 
-cd /home/ # <-- paste your path
 
-touch log.txt
-chmod 755 log.txt
-echo 'cd /var/log/ \n' >> log.txt
-echo 'rm -R auth.log' >> log.txt
-echo 'rm -R syslog' >> log.txt
-echo 'rm -R messages' >> log.txt
-echo 'rm -R mysql' >> log.txt
-echo 'rm -R apache2' >> log.txt
-echo 'rm -R apt' >> log.txt
-echo 'rm -R lastlog' >> log.txt
-echo 'rm -R faillog' >> log.txt
-echo 'rm -R openvpn' >> log.txt
-echo 'rm -R postgresql' >> log.txt
-echo 'rm -R private' >> log.txt
-echo 'rm -R user.log' >> log.txt
-echo 'rm -R rm -R log' >> log.txt
+cd '' # < -- Your path to generate logs
 
+echo "\n Generate New Log?"
+read newLog
 
-echo "Log generate in file log.txt"
+if [ "$newLog" = "$yes" ];
+    then
+    echo "Generate in progress...  \n"
+
+    touch log.txt
+    chmod 755 log.txt
+    echo 'cd /var/log/ \n' >> log.txt
+    echo 'rm -R auth.log' >> log.txt
+    echo 'rm -R syslog' >> log.txt
+    echo 'rm -R messages' >> log.txt
+    echo 'rm -R mysql' >> log.txt
+    echo 'rm -R apache2' >> log.txt
+    echo 'rm -R apt' >> log.txt
+    echo 'rm -R lastlog' >> log.txt
+    echo 'rm -R faillog' >> log.txt
+    echo 'rm -R openvpn' >> log.txt
+    echo 'rm -R postgresql' >> log.txt
+    echo 'rm -R private' >> log.txt
+    echo 'rm -R user.log' >> log.txt
+    echo 'rm -R rm -R log' >> log.txt
+
+    echo "Log generate in file log.txt"
+
+    echo "\n Show Log? (y/n) \n"
+    read showLog
+
+    if [ "$showLog" = "$yes" ];
+        then    
+
+        echo "\n\n\n"
+
+        cat log.txt
+
+        echo "\n Your Logs ^"
+    fi
+
+fi
+
+echo "Program stoped."
