@@ -10,4 +10,4 @@ To start click ,, index.html "
 # Start
 To start script go to main path and write in console:
 
-,, sh nazwa.sh "
+,, sh name.sh "
