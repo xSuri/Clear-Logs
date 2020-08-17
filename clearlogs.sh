@@ -81,4 +81,4 @@ if [ "$newLog" = "$yes" ];
 
 fi
 
-echo "Program stoped."
+echo "Program stopped."
