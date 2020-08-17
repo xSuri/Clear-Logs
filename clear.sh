@@ -21,4 +21,4 @@ if [ "$clearLog" = "$yes" ];
 
 fi
 
-echo "\nProgram stoped."
+echo "\nProgram stopped."
